@@ -7,5 +7,5 @@ $(function(){
 });
 
 $(function(){
-    $("#color-titulo-JQuery").css({"color": "black"});
+    $("#color-titulo-JQuery").css({"color": "black"})
 })
