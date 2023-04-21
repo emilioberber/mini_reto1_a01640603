@@ -1,0 +1,370 @@
+@charset "UTF-8";
+/* Estilos generales */
+.txt2 {
+  color: white;
+}
+
+.fs1 {
+  font-size: 25px;
+}
+
+.fs4 {
+  font-size: 30px;
+  margin-top: 25px;
+  margin-bottom: 100px;
+}
+
+.fs5 {
+  font-size: 42px;
+}
+
+.titleBold {
+  font-weight: bold;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ab956f;
+  color: white;
+  font-family: "Source Serif Pro", serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2{  /*Fonts style for titles videogames style*/
+  font-family: 'Press Start 2P', cursive;
+}
+
+h3, h4, h5, h6, .title { /*Fonts style for titles general style*/
+  font-family: "Roboto Slab", serif;
+}
+
+.card-title{
+  font-size: 17px;
+}
+
+/* videojuegos  */
+main.videojuegos h1 {
+  text-align: center;
+}
+main.videojuegos section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  width: calc(72rem + 90px);
+  margin: 0 auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+main.videojuegos section article.card {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: 3px 3px 15px -3px rgba(0, 0, 0, 0.3);
+  transition-duration: 0.5s;
+}
+main.videojuegos section article.card img {
+  height: 250px;
+  width: auto;
+  transition-duration: 0.5s;
+  margin: 0 auto;
+}
+main.videojuegos section article.card:hover {
+  box-shadow: 3px 3px 15px -3px rgba(0, 0, 0, 0.6);
+}
+main.videojuegos section article.card:hover img {
+  transform: rotateZ(10deg);
+}
+main.videojuegos .logosImg {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+}
+main.videojuegos .logosImg img {
+  height: 100px;
+  width: auto;
+  padding-bottom: 10px;
+}
+
+@media screen and (max-width: 1300px) {
+  main.videojuegos section {
+    grid-template-columns: repeat(3, 1fr);
+    width: calc(54rem + 60px);
+  }
+}
+@media screen and (max-width: 1000px) {
+  main.videojuegos section {
+    grid-template-columns: repeat(2, 1fr);
+    width: calc(36rem + 30px);
+  }
+}
+@media screen and (max-width: 650px) {
+  main.videojuegos section {
+    grid-template-columns: repeat(1, 1fr);
+    width: 18rem;
+    gap: 0;
+  }
+  main.videojuegos section article.card {
+    margin-top: 30px;
+  }
+  main.videojuegos section article.card:first-child {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 550px) {
+  main.videojuegos .logosImg img {
+    width: 90%;
+    height: auto;
+  }
+}
+
+/* main.inicio.inicio grid */
+#principal {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header" "main" "footer";
+}
+
+/* header (MODIFICANDO PLANTILLA DE BOOTSTRAP CON CSS)*/
+header {
+  display: flex;
+  align-items: center; /*Vertical*/
+  justify-content: space-between; /*Horizontal*/
+  grid-area: header;
+  height: 130px;
+}
+header .navbar {
+  background-color: #ab956f;
+}
+header a {
+  color: white;
+}
+header a span {
+  padding-left: 25px;
+  font-size: 32px;
+  font-weight: bold;
+  transition-duration: 0.5s;
+}
+header a span:hover {
+  font-size: 34px;
+  opacity: 0.5;
+  color: black;
+}
+header .nav-link {
+  color: white;
+  font-size: 25px;
+  margin: 0px 10px;
+}
+header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header nav ul li {
+  list-style: none; /*Quitar viñetas*/
+  padding: 25px;
+}
+header nav ul li a {
+  font-size: 25px;
+  transition-duration: 0.5s;
+}
+header nav ul li a:hover {
+  font-size: 27px;
+  opacity: 0.5;
+  color: black;
+}
+
+/* main inicio/index */
+main.inicio {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+  /*display: none;*/
+  grid-template-areas: "left right";
+}
+main.inicio .right {
+  grid-area: right;
+}
+main.inicio .right img {
+  width: auto;
+  height: 80vh;
+}
+main.inicio .left {
+  width: 610px;
+  margin-left: 50px;
+  grid-area: left;
+}
+main.inicio .left h1 {
+  margin: 0;
+}
+main.inicio .left p {
+  margin: 0;
+  line-height: 28px; /*Interlineado*/
+}
+main.inicio .left .btn, main.inicio .left .btn-primary{
+  border-radius: 40px;
+  font-size: 22px;
+  width: 218px;
+  text-align: center;
+  line-height: 70px;
+  margin-right: 15px;
+  margin-top: 50px;
+  display: inline-block;
+  transition-duration: 0.5s;
+  background-color: black;
+  border: black;
+}
+main.inicio .left .btn:hover, main.inicio .left .btn-primary:hover { /*Animación (hover)*/
+  font-size: 24px;
+  box-shadow: 0px 0px 5px black;
+}
+main.inicio .left .btn-negro{
+  background-color: black;
+  border: 1px solid black;
+  color: white;
+}
+/* Main tiendas */
+main.tienda {
+  width: 100%;
+}
+main.tienda h2, div {
+  text-align: center;
+}
+.formulario{
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+  margin-bottom: 120px;
+}
+.boton-color-titulo{
+  margin-bottom: 25px;
+  border-radius: 40px;
+  font-size: 22px;
+  text-align: center;
+  line-height: 70px;
+  margin-right: 15px;
+  display: inline-block;
+  transition-duration: 0.5s;
+  background-color: black;
+  border: black;
+  color: white;
+}
+
+/* Main historia */
+main.historia {
+  width: calc(100% - 60px);
+  margin: 0 30px;
+}
+main.historia section {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+}
+main.historia section article:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main.historia section article img {
+  height: 900px;
+  width: auto;
+}
+main.historia section article p {
+  font-size: 20px;
+}
+.titulo-sucursales{
+  margin-top: 50px;
+}
+.sucursales{
+  margin-top: 150px;
+}
+/* footer */
+footer {
+  background-color: black;
+  width: 100%;
+  grid-area: footer;
+}
+footer .imgs {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  margin: 0 auto;
+  width: 400px;
+}
+footer .imgs a {
+  text-align: center;
+}
+footer .imgs a img {
+  width: 60%;
+  height: auto;
+  margin-top: 20px;
+  transition-duration: 0.5s;
+}
+footer .imgs a img:hover {
+  opacity: 0.5;
+}
+footer small {
+  text-align: center;
+  width: calc(100% - 30px);
+  display: inline-block;
+  padding: 15px;
+}
+
+/* Responsive - Media Queries */
+@media screen and (max-width: 480px) {
+  main.inicio .left .btn-primary{
+    margin-top: 10px;
+  }
+  footer .img a img {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 580px) {
+  header nav ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+  }
+  header nav ul li {
+    padding-bottom: 0;
+  }
+  main.inicio .left {
+    width: calc(100% - 40px);
+    text-align: center;
+    margin-left: 0;
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 860px) {
+  header {
+    flex-direction: column;
+  }
+  header ul {
+    padding-left: 0;
+  }
+  header #logo {
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 1000px) {
+  main.inicio.inicio {
+    grid-template-columns: 1fr;
+    grid-template-areas: "right" "left";
+  }
+  footer {
+    margin-top: 80px;
+  }
+  main.historia section {
+    grid-template-columns: 1fr;
+  }
+}
